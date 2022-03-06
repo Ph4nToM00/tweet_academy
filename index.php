@@ -45,6 +45,8 @@ class Rooter
 	{
 		if (isset($_SESSION['email']))
 			header('location: view/home.php');
+		else
+			showLogin();
 	}
 	private function show404()
 	{
