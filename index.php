@@ -36,6 +36,11 @@ class Rooter
 		}
 	}
 
+	private function showLogin()
+	{
+		if (!isset($_SESSION['email']))
+			header('location: view/login.php');
+	}
 	private function showRegister()
 	{
 		if (!isset($_SESSION['email']))
@@ -45,15 +50,12 @@ class Rooter
 	{
 		if (isset($_SESSION['email']))
 			header('location: view/home.php');
+		else
+			header('location: view/index.php');
 	}
 	private function show404()
 	{
 		header('location: view/error_404.php');
-	}
-	private function showLogin()
-	{
-		if (!isset($_SESSION['email']))
-			header('location: view/login.php');
 	}
 	private function showMyProfil()
 	{
