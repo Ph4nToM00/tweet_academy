@@ -60,7 +60,7 @@ $tweets = $db->getTenLastTweet();
                 <span class="g-color-gray-dark-v4 g-font-size-12">'.  htmlspecialchars($tweets[$i]['creation_date']) . '</span>
             </div>
         
-            <p>' . $tweets[$i]['content'] . '</p>
+            <p>' . htmlspecialchars($tweets[$i]['content']) . '</p>
         
             <ul class="list-inline d-sm-flex my-0">
                 <li class="list-inline-item g-mr-20">
