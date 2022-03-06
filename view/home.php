@@ -1,3 +1,12 @@
+<?php
+require_once('../model/database.php');
+require_once('../model/UserEntity.php');
+require_once('../controller/tweetController.php');
+
+$db = Database::getInstance();
+$user = $db->getUser($_SESSION['email']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,13 +34,13 @@
 
         <main>
             <div class="profil_block">
-                <form>
+                <form method="POST">
                     <div id="profil">
                         <img src="../images/main_pic.png" alt="">
                     </div>
                         <div class="form-group">
                             <textarea class="form-control" id="toTweet" name="toTweet" maxlength="140" rows="3" placeholder=""></textarea>
-                            <button type="submit" class="btn btn-primary">Tweeter</button>
+                            <button type="submit" id="tweet" name="tweet" class="btn btn-primary">Tweeter</button>
                         </div>
                 </form>
             </div> 
@@ -114,5 +123,10 @@
 </html>
 
 <?php
+if(isset($_POST['tweet']))
+{
+    $tweetController = new tweetController;
+    $tweetController->postTweet();
+}
 
 ?>
