@@ -23,7 +23,9 @@ $user = $db->getUser($_SESSION['email']);
 </head>
 
 <body>
-
+<?php
+    include_once('include/navbar.php');
+?>
     <div id="modif">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="../images/Profil.jpg"><span class="font-weight-bold"><?php echo htmlspecialchars($user->getFirstname() . ' ' . $user->getLastname());  ?></span><span class="text-black-50"><?php echo htmlspecialchars($user->getEmail()); ?></span><span> </span></div>

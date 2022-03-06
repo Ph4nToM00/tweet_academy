@@ -9,16 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-<nav>
-            <div class="sticky">
-                <img src="../images/twitterA.png" alt="">
-                <a href="home.php" style="text-decoration: none;"><li>HOME</li></a>
-                <a href="../view/profil.php" style="text-decoration: none;"><li>PROFIL</li></a>
-                <a href="../view/messagerie.php" style="text-decoration: none;"><li>MESSAGERIE</li></a>
-                <a href="../view/index.php" style="text-decoration: none;"><li div="disco">DECONNECTION</li></a>
-
-            </div>
-        </nav>
+<?php
+    include_once('include/navbar.php');
+?>
 <div class="container">
 <div class="content-wrapper">
     <div class="email-app card-margin">
