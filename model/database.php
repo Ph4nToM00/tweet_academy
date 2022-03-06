@@ -107,6 +107,37 @@ class Database
         return $user;
     }
 
+    function getUserById($id)
+    {
+        $rep = ($this->dbh)->prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
+        $rep->execute(array($id));
+
+        $row = $rep->fetch(PDO::FETCH_ASSOC);
+        $user = new User(   
+            $row['display_name'],
+            $row['username'],
+            $row['email'],
+            $row['telephone'],
+            $row['password'],
+            $row['birthdate'],
+            $row['inscription_date'],
+            $row['firstname'],
+            $row['lastname'],
+            $row['about'],
+            $row['theme'],
+            $row['banner'],
+            $row['profile_pic'],
+            $row['id']);
+        return $user;
+    }
+
+    function getTenLastTweet()
+    {
+        $rep = ($this->dbh)->prepare("SELECT * FROM tweet ORDER BY id DESC LIMIT 10");
+        $rep->execute();
+        $row = $rep->fetchAll(PDO::FETCH_ASSOC);
+        return $row;        
+    }
     function getTotalTweet($user)
     {
         $rep = ($this->dbh)->prepare("SELECT COUNT(*) as tweets FROM tweet WHERE id_user = ?");
@@ -181,7 +212,7 @@ class Database
     {
         $sth = ($this->dbh)->prepare("INSERT INTO tweet(creation_date, content, id_user)
         VALUES (:creation_date, :content, :id_user)");
-        
+
         $id = $user->getId();
         $date = date('Y-m-d H:i:s');
 
