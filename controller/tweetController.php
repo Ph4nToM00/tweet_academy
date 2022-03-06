@@ -13,7 +13,7 @@ class tweetController
         if(isset($_POST['toTweet']))
         {
             if(strlen($_POST['toTweet']) > 3 && 140 > strlen($_POST['toTweet']))
-                $db->addTweet($_POST['toTweet'], $content);
+                $db->addTweet($user, $_POST['toTweet']);
         }
     }
 }

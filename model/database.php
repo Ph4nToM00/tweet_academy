@@ -1,6 +1,7 @@
 <?php
 
 require_once('../utilities/functions.php');
+require_once('../model/UserEntity.php');
 
 class Database
 {
@@ -181,6 +182,7 @@ class Database
         $sth = ($this->dbh)->prepare("INSERT INTO tweet(creation_date, content, id_user)
         VALUES (:creation_date, :content, :id_user)");
 
+var_dump($user);
         $id = $user->getId();
         $date = date('Y-m-d H:i:s');
 

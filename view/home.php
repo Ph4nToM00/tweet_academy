@@ -1,10 +1,13 @@
 <?php
+session_start();
+
 require_once('../model/database.php');
 require_once('../model/UserEntity.php');
 require_once('../controller/tweetController.php');
 
 $db = Database::getInstance();
-$user = $db->getUser($_SESSION['email']);
+if($_SESSION['email'])
+    $user = $db->getUser($_SESSION['email']);
 ?>
 
 <!DOCTYPE html>
