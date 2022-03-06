@@ -32,13 +32,13 @@ class registerController
             if (!ctype_alpha($_POST['password']))
                 return;
 
-            if (strlen($_POST['firstname']) > 47)
+            if (strlen($_POST['firstname']) > 60)
                 return;
-            if (strlen($_POST['lastname']) > 47)
+            if (strlen($_POST['lastname']) > 60)
                 return;
-            if (strlen($_POST['display_name']) > 47)
+            if (strlen($_POST['display_name']) > 20)
                 return;
-            if (strlen($_POST['username']) > 47)
+            if (strlen($_POST['username']) > 20)
                 return;
             if (strlen($_POST['city']) > 47)
                 return;

@@ -22,21 +22,21 @@
       <form method="POST" class="row g-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="firstname" class="form-label">Prénom</label>
-          <input type="text" class="form-control" id="firstname" name="firstname" required>
+          <input type="text" class="form-control" id="firstname" name="firstname" minlength="3" maxlength="60" required>
           <div class="valid-feedback">
             Looks good!
           </div>
         </div>
         <div class="col-md-4">
           <label for="lastname" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="lastname" name="lastname" required>
+          <input type="text" class="form-control" id="lastname" name="lastname" minlength="3" maxlength="60" required>
           <div class="valid-feedback">
             Looks good!
           </div>
         </div>
         <div class="col-md-4">
           <label for="lastname" class="form-label">Nom d'affichage</label>
-          <input type="text" class="form-control" id="display_name" name="display_name" required>
+          <input type="text" class="form-control" id="display_name" name="display_name" minlength="3" maxlength="20" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -46,7 +46,7 @@
           <label for="username" class="form-label">Utilisateur</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="inputGroupPrepend" required>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="inputGroupPrepend"  minlength="3" maxlength="20" required>
             <div class="invalid-feedback">
               Please choose a username.
             </div>
@@ -72,7 +72,7 @@
     </div>
     <div class="col-md-6">
       <label for="password" class="form-label">Mot de passe</label>
-      <input type="password" class="form-control" id="password" name="password" minlenght="8" required>
+      <input type="password" class="form-control" id="password" name="password" minlenght="8" maxlength="20" required>
       <div class="valid-feedback">
         Looks good!
       </div>
