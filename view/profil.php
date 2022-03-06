@@ -23,17 +23,18 @@ $user = $db->getUser($_SESSION['email']);
 
 
 <body>
-    <nav>
-            <ul>
-                <a style="text-decoration:none" href=""><li>HOME</li></a>
-                <a style="text-decoration:none" href=""><li>PROFIL</li></a>
-            </ul>
-    </nav>
+<nav>
+            <div class="sticky">
+                <img src="../images/twitterA.png" alt="">
+                <a href="../index.php?action=home" style="text-decoration: none;"><li>HOME</li></a>
+                <a href="../view/profil.php" style="text-decoration: none;"><li>PROFIL</li></a>
+                <a href="../index.php?action=messagerie" style="text-decoration: none;"><li>MESSAGERIE</li></a>
+                <a href="../index.php?action=disconnect" style="text-decoration: none;"><li div="disco">DECONNECTION</li></a>
 
-<label>
-    <input type="checkbox">
-    <span class="check"></span>
-</label>
+            </div>
+        </nav>
+
+
 
     <div class="padding">
     <div class="col-md-8">
