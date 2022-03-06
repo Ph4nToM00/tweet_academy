@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/error_404.css">
-    <title>Document</title>
+    <title>Page 404</title>
 </head>
 <body>
     
@@ -18,15 +18,14 @@
         <div class="col-md-12">
             <div class="error-template">
                 <h1>
-                    Oops!</h1>
-                <h2>
-                    404 Not Found</h2>
+                    Oups!</h1>
+                <h2>404, non trouvé</h2>
                 <div class="error-details">
-                    Sorry, an error has occured, Requested page not found!
+                    La page que vous recherchez semble introuvable 
                 </div>
                 <div class="error-actions">
                     <a href="" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
-                        Take Me Home </a><a href="index.php?action=" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+                        Page d'accueil </a><a href="index.php?action=" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contacter le Support </a>
                 </div>
             </div>
         </div>
