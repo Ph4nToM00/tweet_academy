@@ -29,6 +29,9 @@ class Rooter
 				case 'disconnect':
 					$this->showDisconnect();
 					break;
+				case 'messagerie':
+					$this->showMessagerie();
+					break;
 				default:
 					$this->show404();
 					break;
@@ -72,6 +75,12 @@ class Rooter
 	{
 		if (isset($_SESSION['email']))
 			header('location: view/disconnect.php');
+	}
+
+	public function showMessagerie()
+	{
+		if(isset($_SESSION['email']))
+			header('location: view/messagerie.php');
 	}
 }
 
